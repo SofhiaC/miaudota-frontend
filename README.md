@@ -54,7 +54,7 @@ React 18 · Vite 5 · React Router 6 · Leaflet + OpenStreetMap · CSS puro · n
 URLs na nuvem (backend já publicado):
 
 - API Gateway: https://miaudota-gateway.proudground-4968a7f1.canadacentral.azurecontainerapps.io
-- Frontend publicado (Azure Static Web Apps): *(a preencher)*
+- Frontend publicado (Azure Static Web Apps): https://red-mushroom-01f218510.4.azurestaticapps.net
 - Imagem Docker Hub: `sofhiachromiec/pjbl-frontend:v1`
 
 ### Opção 1: desenvolvimento local, falando com o backend na nuvem
@@ -72,6 +72,15 @@ npm install
 npm run build             # gera ./dist
 npm run preview           # http://localhost:4173
 ```
+
+### Publicar no Azure Static Web Apps
+
+```bash
+az login
+./publicar-swa.sh        # testa, compila, cria o recurso (1ª vez) e publica; no final mostra a URL
+```
+
+O arquivo `public/staticwebapp.config.json` faz as rotas do React Router funcionarem ao recarregar a página.
 
 ### Opção 3: Docker
 
